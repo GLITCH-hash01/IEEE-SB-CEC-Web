@@ -1,6 +1,10 @@
 import { React,useState,useEffect } from 'react'
 import './App.css'
-import { BsInstagram,BsLinkedin,BsFacebook,BsYoutube } from "react-icons/bs";
+import { BsInstagram,BsLinkedin,BsFacebook,BsYoutube,BsAirplaneEngines,BsGraphUpArrow } from "react-icons/bs";
+import { AiOutlineMail } from "react-icons/ai";
+import {BiLibrary} from "react-icons/bi";
+import {SlGraduation} from "react-icons/sl";
+import {CgGirl} from "react-icons/cg";
 
 function Header(){
   const [isIntersecting,setintersecting]=useState(false)
@@ -183,7 +187,7 @@ function OurFamily(){
       <>
       <div className='w-full h-fit justify-center flex flex-col p-10'>
         <span className='text-3xl font-bold text-[#002e5b] text-center '>Our IEEE Family</span>
-        <div className='w-full flex flex-wrap  justify-center'>
+        <div className='w-full flex flex-wrap  justify-center p-8'>
             {
               logoimages.map((image, i) =>{
                 return <img src={image} alt="" key={i} className='hover:scale-125 transition-all duration-100 cursor-pointer'/>
@@ -197,6 +201,69 @@ function OurFamily(){
   return jsxelement;
 }
 
+function Whyieee(){
+  const dataset=[
+    {
+      title: "Free@ieee.org",
+      description:"With GoogleApps@IEEE, members gain a robust capability for messaging with access to email, calendar, and contact services from any Internet-connected computer."
+    },
+    {
+      title: "IEEE eLearning Library",
+      description:"A vast digital library with numerous in- demand courses and research papers."
+    },
+    {
+      title: "Scholarships, Grants & Fellowship",
+      description:"IEEE offers a variety of scholarships, grants, and fellowships for IEEE Student members."
+    },
+    {
+      title:"Student Travel Grant",
+      description:"IEEE offers a number of student travel grants to assist student members in attending conferences and paper presentations."
+    },
+    {
+      title:"IEEE Standards",
+      description:"With an active portfolio of nearly 1,300 standards and projects under development, IEEE is a leading developer of industry standards in a broad range of technologies."
+    },
+    {
+      title:"Celebrating Women in Science",
+      description:"IEEE Women in Engineering is one of the largest professional organizations dedicated to promoting women in STEM, inspiring women across the world to pursue their interests in the field of science and technology."
+    }
+  ]
+  
+  const jsxelement=(
+      <>
+      <div className='w-full h-fit bg-[#00629b] flex flex-row max-[750px]:flex-col '>
+        <div className='w-2/6  flex  justify-center items-center relative p-3 max-[750px]:w-full '>
+          <div className='w-full h-full flex justify-center items-center relative border-r-[1px] border-white max-[750px]:border-r-0 max-[750px]:border-b-[1px]'>
+
+            <span className='text-white  font-600 text-4xl p-5'>Why IEEE ?</span>
+          </div>
+        </div>
+        <div className='grow  grid grid-rows-3 grid-flow-col gap-3 p-3 max-[500px]:grid-flow-row '>
+          {dataset.map((value,index)=>{
+            return(
+          <div className='w-22 h-fit  flex flex-row items-center'>
+            {(index==0)? <AiOutlineMail size={'35px'} color='white' className='flex items-center mr-2'/>:<></>}
+            {(index==1)? <BiLibrary size={'35px'} color='white' className='flex items-center mr-2'/>:<></>}
+            {(index==2)? <SlGraduation size={'35px'} color='white' className='flex items-center mr-2'/>:<></>}
+            {(index==3)? <BsAirplaneEngines size={'35px'} color='white' className='flex items-center mr-2'/>:<></>}
+            {(index==4)? <BsGraphUpArrow size={'35px'} color='white' className='flex items-center mr-2'/>:<></>}
+            {(index==5)? <CgGirl size={'35px'} color='white' className='flex items-center mr-2'/>:<></>}
+            <div className='flex flex-col w-full h-full text-white p-2 place-content-center'>
+              <span className='text-xl font-semibold'>{value.title}</span>
+              <p className={'text-sm'}>{value.description}</p>
+            </div>
+          </div>)
+          })}
+        </div>
+        
+
+      </div>
+      
+      </>);
+  
+  return jsxelement;
+}
+
 
 function App() {
   
@@ -206,12 +273,13 @@ function App() {
     <ImageSlideshow/>
     <HeroSection/>
     
-    <div className='h-fit bg-fixed  flex flex-col' st>
+    <div className='h-fit bg-fixed  flex flex-col' >
       <div className='w-screen h-screen '></div>
         <Aboutieee/>
     </div>
     <CECvsIeee/>
     <OurFamily/>
+    <Whyieee/>
     <div className='w-screen h-screen bg-transparent'></div>
     </>
   )
