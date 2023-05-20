@@ -147,6 +147,57 @@ function Aboutieee(){
   return jsxelement;
 }
 
+function CECvsIeee(){
+  const jsxelement=(
+      <>
+      <div className='w-full bg-fixed h-fit bg-center bg-cover' style={{backgroundImage:`url('/cec_1.jpeg')`}}>
+        <div className='w-full h-full backdrop-blur'>
+          <h3 className='text-white text-5xl ml-10 p-5 font-semibold'>CEC</h3>
+          <p className='text-white ml-10 p-5'>The Government College of Engineering Chengannur (established in 1993), commonly known as CEC, is an engineering institute in the state of Kerala, India. The college was set up under the auspices of the Institute of Human Resources Development (IHRD) and is affiliated with the APJ Abdul Kalam Technological University (KTU). It currently offers undergraduate degrees in four engineering streams and two postgraduate programs.</p>
+          <h3 className='text-white text-5xl ml-10 p-5 font-semibold'>IEEE SB CEC</h3>
+          <p className='text-white ml-10 p-5'>IEEE Student Branch College of Engineering Chengannur was formed in mid-1997, with the goal of keeping the students in touch with advancing technology. It is equipped with an IEEE library that was inaugurated in December 1999 and currently functions as the headquarters of IEEE SB CEC. The Student Branch comes under the Kochi Hub of IEEE Kerala Section and is one of the most active Student Branches in the country. IEEE SB CEC has made numerous contributions to its student community that has received widespread recognition across the globe and is the first Student Branch in the Asia-Pacific Region to establish a Women in Engineering Affinity Group.</p>
+
+        </div>
+      </div>
+
+
+
+      </>);
+  
+    return jsxelement;
+}
+
+function OurFamily(){
+  const logoimages=[
+    "/Ieeefamilylogos/cs-logo.png",
+    "/Ieeefamilylogos/ias-logo.png",
+    "/Ieeefamilylogos/ims-logo.png",
+    "/Ieeefamilylogos/pes-logo.png",
+    "/Ieeefamilylogos/ras-logo.png",
+    "/Ieeefamilylogos/sight-logo.png",
+    "/Ieeefamilylogos/sscs-logo.png",
+    "/Ieeefamilylogos/wie-logo.png"
+  ]
+
+  const jsxelement=(
+      <>
+      <div className='w-full h-fit justify-center flex flex-col p-10'>
+        <span className='text-3xl font-bold text-[#002e5b] text-center '>Our IEEE Family</span>
+        <div className='w-full flex flex-wrap  justify-center'>
+            {
+              logoimages.map((image, i) =>{
+                return <img src={image} alt="" key={i} className='hover:scale-125 transition-all duration-100 cursor-pointer'/>
+              })
+            }
+        </div>
+      </div>
+      
+      </>
+  );
+  return jsxelement;
+}
+
+
 function App() {
   
   const jsxelement=(
@@ -155,10 +206,12 @@ function App() {
     <ImageSlideshow/>
     <HeroSection/>
     
-    <div className='h-fit bg-white  flex flex-col'>
+    <div className='h-fit bg-fixed  flex flex-col' st>
       <div className='w-screen h-screen '></div>
         <Aboutieee/>
     </div>
+    <CECvsIeee/>
+    <OurFamily/>
     <div className='w-screen h-screen bg-transparent'></div>
     </>
   )
