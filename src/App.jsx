@@ -6,6 +6,22 @@ import {BiLibrary} from "react-icons/bi";
 import {SlGraduation} from "react-icons/sl";
 import {CgGirl} from "react-icons/cg";
 
+function Followus(){
+  const jsxelements = (
+    <>
+
+    <a href="https://www.instagram.com/ieee_sb_cec/" className='text-[#b4b4b4] hover:text-white cursor-pointer'><BsInstagram size={20} /></a>
+    <a href="https://www.linkedin.com/company/cecieee/" className='text-[#b4b4b4] hover:text-white cursor-pointer'><BsLinkedin size={20} /></a>
+    <a href="https://www.facebook.com/IEEECEC/" className='text-[#b4b4b4] hover:text-white cursor-pointer'><BsFacebook size={20} /></a>
+    <a href="https://www.youtube.com/channel/UCXh6fVbDGCIidsVHabpZFiw" className='text-[#b4b4b4] hover:text-white cursor-pointer'><BsYoutube size={20}  href='www.youtube.com'/></a>
+
+
+    </>
+  );
+  return jsxelements;
+}
+
+
 function Header(){
   const [isIntersecting,setintersecting]=useState(false)
 
@@ -39,12 +55,9 @@ function Header(){
         <a href="" className='text-center text-lg'>About us</a>
       </div>
       <div className='h-[75%]'></div>
-      < div className='flex flex-row gap-[15px] justify-center bottom-0'>
-          <a href="https://www.instagram.com/ieee_sb_cec/" className='socials'><BsInstagram size={20} className='socials'/></a>
-          <a href="https://www.linkedin.com/company/cecieee/" className='socials'><BsLinkedin size={20} className='socials'/></a>
-          <a href="https://www.facebook.com/IEEECEC/" className='socials'><BsFacebook size={20} className='socials'/></a>
-          <a href="https://www.youtube.com/channel/UCXh6fVbDGCIidsVHabpZFiw" className='socials'><BsYoutube size={20}  href='www.youtube.com'/>
-        </a>
+      <div className='flex flex-row gap-[15px] justify-center bottom-0'>
+          <Followus/>
+
       </div>
     </div>
     </>
@@ -109,12 +122,7 @@ function HeroSection(){
         <a href="" className='text-[#b4b4b4] hover:text-white max-[575px]:text-xs'>IEEE Xplore Digital Library</a>
         <a href="" className='text-[#b4b4b4] hover:text-white max-[575px]:text-xs'>IEEE Region 10</a>
         <div className='absolute right-5 w-fit h-full flex flex-row gap-5 items-center max-[575px]:hidden'>
-          <a href="https://www.instagram.com/ieee_sb_cec/" className='text-[#b4b4b4] hover:text-white cursor-pointer'><BsInstagram size={20} /></a>
-          <a href="https://www.linkedin.com/company/cecieee/" className='text-[#b4b4b4] hover:text-white cursor-pointer'><BsLinkedin size={20} /></a>
-          <a href="https://www.facebook.com/IEEECEC/" className='text-[#b4b4b4] hover:text-white cursor-pointer'><BsFacebook size={20} /></a>
-          <a href="https://www.youtube.com/channel/UCXh6fVbDGCIidsVHabpZFiw" className='text-[#b4b4b4] hover:text-white cursor-pointer'><BsYoutube size={20}  href='www.youtube.com'/></a>
-
-
+          <Followus/>
         </div>
 
       </div>
@@ -264,6 +272,80 @@ function Whyieee(){
   return jsxelement;
 }
 
+function Eventssection(){
+  const jsxelement=(
+    <>
+    <div className='w-full h-[400px] flex flex-col'>
+      <span className='text-3xl font-semibold text-[#002e5b] justify-center flex'>Events</span>
+
+    </div>
+    </>
+  );
+  return jsxelement;
+}
+
+function Testimonials(){
+  const jsxelement=(
+    <> 
+    <div className='w-full h-fit flex flex-col'>
+      <span className='text-4xl font-semibold text-[#002e5b] justify-center flex p-10'>Testimonials</span>
+      <div className='w-full h-[450px]  bg-cover bg-top' style={{backgroundImage:`url('/cec_2.jpg')`}}>
+        <div className='w-full h-full backdrop-blur-md flex flex-col text-white items-center justify-center'>
+          <div className='w-[80px] h-[80px] rounded-full bg-black m-3'>
+
+          </div>
+          <div className='w-fit h-fit flex flex-col items-end'>
+            
+          <p className='w-[800px] '>People talk about job security. No one can give you that. Job security depends on the company. What IEEE can do – and I use the phrase carefully – is offer security. You can be the most valuable engineer by being current in technology and by networking with others. If you take advantage of the products and services that IEEE offers, you will become the most valuable engineer in your organization. And if your job goes away, you’ll have no trouble finding another.
+          </p>
+          <span>-Sooraj P<br/> CS Chairman IEEE SB CEC</span>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    </>
+  );
+  return jsxelement;
+}
+
+function Footer(){
+  const jsxelement=(
+    <>
+    <div className='w-full h-fit flex flex-col bg-[#002e5b]  mt-2 p-11 text-white'>
+      <div className=' w-full h-full flex flex-wrap gap-3'>
+        <div className='flex flex-col h-fit'>
+          <img src="/Icons/IEEE-SB-logo-web.png" alt=""  className='w-[300px]'/>
+          <p className='py-3'>
+          IEEE Student Branch,<br/>
+          College of Engineering,<br/> 
+          Chengannur Alapuzha, Kerala <br />
+          Pin:689121
+
+          </p>
+          <span className='flex flex-row items-center gap-2'><AiOutlineMail/>chairman_ieee@ceconline.edu</span>
+        </div>
+        <div className='h-full flex flex-col justify-center px-10 pt-3'>
+          <p>Become an IEEE member now.</p>
+          <a href="" className='hover:underline transition-all duration-100'>Join us</a>
+
+        </div>
+        <div className='flex flex-col px-10 grow pt-3 items-end relative'>
+          <span className='text-3xl relative '>Follow Us</span>
+          <div className='flex flex-row gap-5 pt-3 pl-3'>
+            <Followus/>
+
+
+          </div>
+          <span className='absolute bottom-1'>Developed by Harikrishna A <a href="" className='underline hover:text-blue-700'>Github</a></span>
+        </div>
+      </div>
+    </div>
+    </>
+  );
+  return jsxelement;
+}
+
 
 function App() {
   
@@ -280,7 +362,10 @@ function App() {
     <CECvsIeee/>
     <OurFamily/>
     <Whyieee/>
-    <div className='w-screen h-screen bg-transparent'></div>
+    {/* <Eventssection/> */}
+    <Testimonials/>
+    <Footer/>
+  
     </>
   )
   return jsxelement
