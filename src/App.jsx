@@ -420,7 +420,7 @@ function Testimonials(){
       }
 
 
-    }, 10000
+    }, 7500
     );
     return ()=>clearInterval(intervalid);
   });
