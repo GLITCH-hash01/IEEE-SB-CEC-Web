@@ -35,8 +35,8 @@ function Header(){
   window.addEventListener('scroll',changeheaderstate);
   const jsxelement=(
     <>
-    <header className={'text-white flex flex-row sticky h-16 z-10 top-0 '+(isIntersecting? 'bg-black':'')} id="main-page">
-      <div className='relative w-full h-full flex flex-row'>
+    <header className={'text-white flex flex-col sticky h-16 z-10 top-0 '+(isIntersecting? 'bg-black':'')} id="main-page">
+      <div className='relative w-full h-full flex flex-row z-10'>
         <h1 className='p-5 text-xl font-medium'>IEEE SB CEC</h1>
         <nav className='absolute right-5 py-5 flex flex-row gap-5 max-[575px]:hidden text-lg'>
           {isIntersecting?(<a href={joinuslink} className='px-3 border flex justify-center h-8 items-center rounded-2xl border-[#b4b4b4] text-[#b4b4b4] text-base hover:bg-white hover:text-black'>Join IEEE</a>):''}
@@ -45,18 +45,17 @@ function Header(){
         </nav>
         <nav className='hidden absolute right-5 py-5 flex-row gap-5 max-[575px]:flex'>
           {isIntersecting?(<a href={joinuslink} className='px-3 border flex justify-center h-8 items-center rounded-2xl border-[#b4b4b4] text-[#b4b4b4] text-base hover:bg-white hover:text-black'>Join IEEE</a>):''}
-          <div className="menu-container cursor-pointer" onClick={()=>{setmenustate(!menubtnstate)}}>
+          <div className="menu-container cursor-pointer z-[100px]" onClick={()=>{setmenustate(!menubtnstate)}}>
             <div className={"bar1 "+(menubtnstate? 'change':"")} ></div>
             <div className={"bar2 "+(menubtnstate? 'change':"")} ></div>
             <div className={"bar3 "+(menubtnstate? 'change':"")} ></div>
           </div>
         </nav>
       </div>
-    </header>
-    <div className={'side-nav '+(menubtnstate?"side-nav-active slide-in-animation":"slide-out-animation")}>
-      <div className='flex flex-col p-10'>
-        <a href="#home" className='text-center text-lg'>Home</a>
-        <a href="#About-IEEE" className='text-center text-lg'>About us</a>
+    <div className={'side-nav h-screen '+(menubtnstate?"side-nav-active slide-in-animation":"slide-out-animation")}>
+      <div className='flex flex-col p-20 m-3 gap-3'>
+        <a href="#home" className='text-center text-lg' onClick={()=>{setmenustate(!menubtnstate)}}>Home</a>
+        <a href="#About-IEEE" className='text-center text-lg' onClick={()=>{setmenustate(!menubtnstate)}}>About us</a>
       </div>
       <div className='h-[75%]'></div>
       <div className='flex flex-row gap-[15px] justify-center bottom-0'>
@@ -64,6 +63,7 @@ function Header(){
 
       </div>
     </div>
+    </header> 
     </>
   )
   useEffect(()=>{
@@ -363,13 +363,13 @@ function Testimonials(){
       <div className='w-full h-[450px]  bg-cover bg-top' style={{backgroundImage:`url('/cec_2.jpg')`}}>
         <div className='w-full h-full backdrop-blur-md flex flex-col text-white items-center justify-center'>
           <div className='w-[70px] h-[70px] rounded-full bg-black m-3 overflow-clip'>
-              <img src={dataset[currentindex].icon} alt="" className='w-full h-full' />
+              <img src={dataset[currentindex].icon} alt="" className='w-full h-full transition-all duration-150' />
           </div>
           
           <div className='w-fit h-fit flex flex-col items-end'>
             
-          <p className='w-[800px] max-[800px]:w-fit  max-[800px]:text-center max-[800px]:px-2'>{dataset[currentindex].quote}</p>
-          <span className='max-[800px]:px-2'>-{dataset[currentindex].name}<br/> {dataset[currentindex].position}</span>
+          <p className='w-[800px] max-[800px]:w-fit  max-[800px]:text-center max-[800px]:px-2 transition-all duration-150'>{dataset[currentindex].quote}</p>
+          <span className='max-[800px]:px-2 transition-all duration-150'>-{dataset[currentindex].name}<br/> {dataset[currentindex].position}</span>
           </div>
 
         </div>
@@ -380,14 +380,15 @@ function Testimonials(){
   useEffect(()=>{
     const intervalid=setInterval(() => {
       if ((currentindex+1)<dataset.length){
-        changeindex(currentindex+1)
+        setindex(currentindex+1)
       }
       else{
-        changeindex(0)
+        setindex(0)
       }
 
 
-    }, 30000);
+    }, 15000
+    );
     return ()=>clearInterval(intervalid);})
   return jsxelement;
 }
