@@ -5,9 +5,10 @@ import { AiOutlineMail } from "react-icons/ai";
 import {BiLibrary} from "react-icons/bi";
 import {SlGraduation} from "react-icons/sl";
 import {CgGirl} from "react-icons/cg";
-
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 var joinuslink="https://www.ieee.org/membership/join/index.html?WT.mc_id=hc_join"
-
+AOS.init({once:true});
 function Followus(){
   const jsxelements = (
     <>
@@ -138,9 +139,10 @@ function HeroSection(){
 }
 
 function Aboutieee(){
+
   const jsxelement=(
     <>
-    <div className='w-full h-fit flex flex-col px-[50px] overflow-x-hidden' id='About-IEEE'>
+    <div className='w-full h-fit flex flex-col px-[50px] overflow-x-hidden' id='About-IEEE' data-aos='fade-up' data-aos-duration='3500'>
       <div className='flex flex-col'>
 
         <h2 className='text-3xl font-semibold text-[#002e5b] self-center'>About IEEE</h2>
@@ -169,8 +171,8 @@ function CECvsIeee(){
       <>
         <div className='w-full p-4 h-fit bg-[#00629b] flex flex-col gap-3'>
           <div className='w-full h-fit flex flex-row max-[1035px]:flex-col'>
-            <img src="/cec_1.jpeg" alt=""  className='w-[500px] mx-10 shadow-xl max-[1035px]:mx-0'/>
-            <div className='flex flex-col h-full grow'>
+            <img src="/cec_1.jpeg" alt=""  className='w-[500px] mx-10 shadow-xl max-[1035px]:mx-0' data-aos='fade-up'/>
+            <div className='flex flex-col h-full grow' data-aos="slide-left">
               <div className='pr-5 flex before:bg-white before:w-full relative before:h-[2px] before:absolute before:-bottom-2'><span className='text-4xl text-white font-medium py-3'>CEC</span></div>
               
               <p className='text-white py-4'>
@@ -180,7 +182,7 @@ function CECvsIeee(){
             </div>
           </div>
           <div className='w-full h-fit flex flex-row pl-10 text-white max-[1035px]:flex-col-reverse max-[1035px]:pl-0 '>
-            <div className='flex flex-col pr-6 max-[1035px]:pr-0'>
+            <div className='flex flex-col pr-6 max-[1035px]:pr-0' data-aos="slide-right">
               <span className='text-white  text-4xl py-2 before:w-full relative before:h-[2px] before:bg-white before:absolute before:-bottom-2'>IEEE SB CEC</span>
               <p className='pt-3'>IEEE Student Branch College of Engineering Chengannur was formed in mid-1997, with the goal of keeping the students in touch with advancing technology. It is equipped with an IEEE library that was inaugurated in December 1999 and currently functions as the headquarters of IEEE SB CEC. The Student Branch comes under the Kochi Hub of IEEE Kerala Section and is one of the most active Student Branches in the country. IEEE SB CEC has made numerous contributions to its student community that has received widespread recognition across the globe and is the first Student Branch in the Asia-Pacific Region to establish a Women in Engineering Affinity Group.</p>
               <div className='flex flex-row grow justify-center items-center gap-14 max-[1035px]:pl-5 max-[1035px]:flex-wrap max-[1035px]:py-5'>
@@ -190,7 +192,7 @@ function CECvsIeee(){
 
               </div>
             </div>
-            <img src="/test.jpg" alt="" className='h-fit w-[500px]'/>
+            <img src="/test.jpg" alt="" className='h-fit w-[500px]' data-aos='fade-up'/>
             <div className='h-full'>
 
             </div>
@@ -217,12 +219,12 @@ function OurFamily(){
 
   const jsxelement=(
       <>
-      <div className='w-full h-fit justify-center flex flex-col p-10'>
-        <span className='text-3xl font-bold text-[#002e5b] text-center '>Our IEEE Family</span>
-        <div className='w-full flex flex-wrap  justify-center p-8'>
+      <div className='w-full h-fit justify-center flex flex-col p-10' data-aos='fade-up'>
+        <span className='text-3xl font-bold text-[#002e5b] text-center '  data-aos='fade-up'>Our IEEE Family</span>
+        <div className='w-full flex flex-wrap  justify-center p-8' data-aos='fade-up'>
             {
               logoimages.map((image, i) =>{
-                return <img src={image} alt="" key={i} className='hover:scale-125 transition-all duration-100 cursor-pointer'/>
+                return <img src={image} alt="" key={i} className='hover:scale-125 transition-all duration-100 cursor-pointer' />
               })
             }
         </div>
@@ -263,7 +265,7 @@ function Whyieee(){
   
   const jsxelement=(
       <>
-      <div className='w-full h-fit bg-[#00629b] flex flex-row max-[750px]:flex-col '>
+      <div className='w-full h-fit bg-[#00629b] flex flex-row max-[750px]:flex-col '  data-aos='slide-right'>
         <div className='w-2/6  flex  justify-center items-center relative p-3 max-[750px]:w-full '>
           <div className='w-full h-full flex justify-center items-center relative border-r-[1px] border-white max-[750px]:border-r-0 max-[750px]:border-b-[1px]'>
 
@@ -273,7 +275,7 @@ function Whyieee(){
         <div className='grow  grid grid-rows-3 grid-flow-col gap-3 p-3 max-[500px]:grid-flow-row '>
           {dataset.map((value,index)=>{
             return(
-          <div className='w-22 h-fit  flex flex-row items-center'>
+          <div className='w-22 h-fit  flex flex-row items-center' key={index}>
             {(index==0)? <AiOutlineMail size={'35px'} color='white' className='flex items-center mr-2'/>:<></>}
             {(index==1)? <BiLibrary size={'35px'} color='white' className='flex items-center mr-2'/>:<></>}
             {(index==2)? <SlGraduation size={'35px'} color='white' className='flex items-center mr-2'/>:<></>}
@@ -358,7 +360,7 @@ function Testimonials(){
   ]
   const jsxelement=(
     <> 
-    <div className='w-full h-fit flex flex-col'>
+    <div className='w-full h-fit flex flex-col' data-aos='fade-up'>
       <span className='text-4xl font-semibold text-[#002e5b] justify-center flex p-10'>Testimonials</span>
       <div className='w-full h-[450px]  bg-cover bg-top' style={{backgroundImage:`url('/cec_2.jpg')`}}>
         <div className='w-full h-full backdrop-blur-md flex flex-col text-white items-center justify-center'>
