@@ -311,7 +311,8 @@ function Eventssection(){
 }
 
 function Testimonials(){
-  const [currentindex, setindex]=useState(Math.floor(Math.random()*7));
+  // const [currentindex, setindex]=useState(Math.floor(Math.random()*7));
+  const [currentindex, setindex]=useState(0);
 
   const dataset=[
     {
@@ -362,7 +363,7 @@ function Testimonials(){
     <> 
     <div className='w-full h-fit flex flex-col' data-aos='fade-up'>
       <span className='text-4xl font-semibold text-[#002e5b] justify-center flex p-10'>Testimonials</span>
-      <div className='w-full h-[450px]  bg-cover bg-top' style={{backgroundImage:`url('/cec_2.jpg')`}}>
+      <div className='w-full h-[450px]  bg-cover bg-top max-[500px]:h-fit' style={{backgroundImage:`url('/cec_2.jpg')`}}>
         <div className='w-full h-full backdrop-blur-md flex flex-col text-white items-center justify-center'>
           <div className='w-[70px] h-[70px] rounded-full bg-black m-3 overflow-clip'>
               <img src={dataset[currentindex].icon} alt="" className='w-full h-full transition-all duration-150' />
@@ -370,7 +371,7 @@ function Testimonials(){
           
           <div className='w-fit h-fit flex flex-col items-end'>
             
-          <p className='w-[800px] max-[800px]:w-fit  max-[800px]:text-center max-[800px]:px-2 transition-all duration-150'>{dataset[currentindex].quote}</p>
+          <p className='w-[800px] max-[800px]:w-fit h-fit  max-[800px]:text-center max-[800px]:px-2 transition-all duration-150'>{dataset[currentindex].quote}</p>
           <span className='max-[800px]:px-2 transition-all duration-150'>-{dataset[currentindex].name}<br/> {dataset[currentindex].position}</span>
           </div>
 
