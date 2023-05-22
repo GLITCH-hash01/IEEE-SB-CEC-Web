@@ -148,16 +148,16 @@ function HeroSection(){
     <div className='absolute h-screen  w-screen z-[2] right-0 top-0 bg-gradient-to-b from-black to-transparent' id="home">
       <div className='flex flex-col w-fit  text-white ml-10 h-screen place-content-center'>
         <span>Welcome to </span>
-        <span className='font-600 text-50 h-[56.7px] max-[400px]:text-35'>IEEE</span>
+        <span className='font-600 text-50 h-[56.7px] max-[400px]:text-35 '>IEEE</span>
         <span className='font-600 text-50 h-[56.7px] max-[400px]:text-35'>Student Branch</span>
         <span className='font-600 text-50 h-[56.7px] max-[400px]:text-35'>CE Chengannur</span>
-        <a href={joinuslink} className='rounded-3xl  border-2  w-[130px] h-[50px] justify-center flex items-center my-5 cursor-pointer hover:bg-white hover:text-black transition-all duration-75'> Join IEE</a>
+        <a href={joinuslink} className='rounded-3xl  border-2  w-[130px] h-[50px] justify-center flex items-center my-5 cursor-pointer hover:bg-white hover:text-black transition-all duration-75'> Join IEEE</a>
       </div>
       <div className='absolute bottom-0 bg-black h-16 w-screen flex flex-row gap-5 items-center p-5 max-[575px]:h-10'>
         <a href="https://www.ieee.org/" className='text-[#b4b4b4] hover:text-white max-[575px]:text-xs'>IEEE.org</a>
         <a href="https://ieeexplore.ieee.org/Xplore/home.jsp" className='text-[#b4b4b4] hover:text-white max-[575px]:text-xs'>IEEE Xplore Digital Library</a>
         <a href="https://www.ieeer10.org/" className='text-[#b4b4b4] hover:text-white max-[575px]:text-xs'>IEEE Region 10</a>
-        <div className='absolute right-5 w-fit h-full flex flex-row gap-5 items-center max-[575px]:hidden'>
+        <div className='absolute right-5 w-fit h-full flex flex-row gap-5 items-center max-[575px]:hidden ' >
           <Followus/>
         </div>
       </div>
