@@ -153,7 +153,7 @@ function HeroSection(){
         <span className='font-600 text-50 h-[56.7px] max-[400px]:text-35 opacity-60'>CE Chengannur</span>
         <a href={joinuslink} className='rounded-3xl  border-2  w-[130px] h-[50px] justify-center flex items-center my-5 cursor-pointer hover:bg-white hover:text-black transition-all duration-75'> Join IEEE</a>
       </div>
-      <div className='absolute bottom-0 bg-black h-16 w-screen flex flex-row gap-5 items-center p-5 px-10 max-[575px]:h-10'>
+      <div className='absolute bottom-0 bg-black h-16 w-screen flex flex-row gap-5 items-center p-5 px-10 max-[575px]:h-10' id='About-IEEE'>
         <a href="https://www.ieee.org/" className='text-[#b4b4b4] hover:text-white max-[575px]:text-xs'>IEEE.org</a>
         <a href="https://ieeexplore.ieee.org/Xplore/home.jsp" className='text-[#b4b4b4] hover:text-white max-[575px]:text-xs'>IEEE Xplore Digital Library</a>
         <a href="https://www.ieeer10.org/" className='text-[#b4b4b4] hover:text-white max-[575px]:text-xs'>IEEE Region 10</a>
@@ -174,9 +174,9 @@ function Aboutieee(){
   // Main HTML Code
   const jsxelement=(
     <>
-    <div className='w-full h-fit flex flex-col px-[50px] overflow-x-hidden' id='About-IEEE' data-aos='fade-up' data-aos-duration='3500'>
+    <div className='w-full h-fit flex flex-col px-[50px] overflow-x-hidden'  data-aos='fade-up' data-aos-duration='3500'>
       <div className='flex flex-col'>
-        <h2 className='text-3xl font-semibold text-[#002e5b] self-center'>About IEEE</h2>
+        <h2 className='text-4xl font-semibold text-[#002e5b] self-center'>About IEEE</h2>
         <p className='self-center w-[500px] text-center py-4 max-[575px]:w-fit'>IEEE is a global association and organization of professionals working toward the development, implementation and maintenance of technology-centered products and services.</p>
       </div>
       <div className='flex flex-row max-[1020px]:flex-wrap max-[575px]:flex-col'>
