@@ -27,10 +27,10 @@ AOS.init({once:true});
 function Followus(){
   const jsxelements = (
     <>
-      <a href="https://www.instagram.com/ieee_sb_cec/" className='text-[#b4b4b4] hover:text-white cursor-pointer'><BsInstagram size={20} /></a>
-      <a href="https://www.linkedin.com/company/cecieee/" className='text-[#b4b4b4] hover:text-white cursor-pointer'><BsLinkedin size={20} /></a>
-      <a href="https://www.facebook.com/IEEECEC/" className='text-[#b4b4b4] hover:text-white cursor-pointer'><BsFacebook size={20} /></a>
-      <a href="https://www.youtube.com/channel/UCXh6fVbDGCIidsVHabpZFiw" className='text-[#b4b4b4] hover:text-white cursor-pointer'><BsYoutube size={20}  href='www.youtube.com'/></a>
+      <a href="https://www.instagram.com/ieee_sb_cec/" className='text-[#b4b4b4] hover:text-white cursor-pointer hover:-translate-y-[1px]'><BsInstagram size={20} /></a>
+      <a href="https://www.linkedin.com/company/cecieee/" className='text-[#b4b4b4] hover:text-white cursor-pointer hover:-translate-y-[1px]'><BsLinkedin size={20} /></a>
+      <a href="https://www.facebook.com/IEEECEC/" className='text-[#b4b4b4] hover:text-white cursor-pointer hover:-translate-y-[1px]'><BsFacebook size={20} /></a>
+      <a href="https://www.youtube.com/channel/UCXh6fVbDGCIidsVHabpZFiw" className='text-[#b4b4b4] hover:text-white cursor-pointer hover:-translate-y-[1px]'><BsYoutube size={20}  href='www.youtube.com'/></a>
     </>
   );
   return jsxelements;
@@ -145,15 +145,15 @@ function HeroSection(){
   // Main HTML Code
   const jsxelement=(
     <>
-    <div className='absolute h-screen  w-screen z-[2] right-0 top-0 bg-gradient-to-b from-black to-transparent' id="home">
+    <div className='absolute h-screen  w-screen z-[2] right-0 top-0 bg-gradient-to-b from-[#1d1c1c] to-transparent' id="home">
       <div className='flex flex-col w-fit  text-white ml-10 h-screen place-content-center'>
-        <span>Welcome to </span>
-        <span className='font-600 text-50 h-[56.7px] max-[400px]:text-35'>IEEE</span>
-        <span className='font-600 text-50 h-[56.7px] max-[400px]:text-35'>Student Branch</span>
-        <span className='font-600 text-50 h-[56.7px] max-[400px]:text-35'>CE Chengannur</span>
-        <a href={joinuslink} className='rounded-3xl  border-2  w-[130px] h-[50px] justify-center flex items-center my-5 cursor-pointer hover:bg-white hover:text-black transition-all duration-75'> Join IEE</a>
+        <span className='text-2xl'>Welcome to </span>
+        <span className='font-600 text-50 h-[56.7px] max-[400px]:text-35 opacity-60'>IEEE Student Branch</span>
+        {/* <span className='font-600 text-50 h-[56.7px] max-[400px]:text-35'>Student Branch</span> */}
+        <span className='font-600 text-50 h-[56.7px] max-[400px]:text-35 opacity-60'>CE Chengannur</span>
+        <a href={joinuslink} className='rounded-3xl  border-2  w-[130px] h-[50px] justify-center flex items-center my-5 cursor-pointer hover:bg-white hover:text-black transition-all duration-75'> Join IEEE</a>
       </div>
-      <div className='absolute bottom-0 bg-black h-16 w-screen flex flex-row gap-5 items-center p-5 max-[575px]:h-10'>
+      <div className='absolute bottom-0 bg-black h-16 w-screen flex flex-row gap-5 items-center p-5 px-10 max-[575px]:h-10'>
         <a href="https://www.ieee.org/" className='text-[#b4b4b4] hover:text-white max-[575px]:text-xs'>IEEE.org</a>
         <a href="https://ieeexplore.ieee.org/Xplore/home.jsp" className='text-[#b4b4b4] hover:text-white max-[575px]:text-xs'>IEEE Xplore Digital Library</a>
         <a href="https://www.ieeer10.org/" className='text-[#b4b4b4] hover:text-white max-[575px]:text-xs'>IEEE Region 10</a>
@@ -201,7 +201,7 @@ function CECvsIeee(){
   // Main HTML Code
   const jsxelement=(
       <>
-      <div className='w-full p-4 h-fit bg-[#00629b] flex flex-col gap-3'>
+      <div className='w-full p-4 h-fit bg-[#002e5b] flex flex-col gap-3'>
         <div className='w-full h-fit flex flex-row max-[1035px]:flex-col'>
           <img src="/Images/cec_1.jpeg" alt=""  className='w-[500px] mx-10 shadow-xl max-[1035px]:mx-0' data-aos='fade-up'/>
           <div className='flex flex-col h-full grow' data-aos="slide-left">
@@ -218,7 +218,7 @@ function CECvsIeee(){
           <div className='flex flex-col pr-6 max-[1035px]:pr-0' data-aos="slide-right">
             <span className='text-white  text-4xl py-2 before:w-full relative before:h-[2px] before:bg-white before:absolute before:-bottom-2'>IEEE SB CEC</span>
             <p className='pt-3'>IEEE Student Branch College of Engineering Chengannur was formed in mid-1997, with the goal of keeping the students in touch with advancing technology. It is equipped with an IEEE library that was inaugurated in December 1999 and currently functions as the headquarters of IEEE SB CEC. The Student Branch comes under the Kochi Hub of IEEE Kerala Section and is one of the most active Student Branches in the country. IEEE SB CEC has made numerous contributions to its student community that has received widespread recognition across the globe and is the first Student Branch in the Asia-Pacific Region to establish a Women in Engineering Affinity Group.</p>
-            <div className='flex flex-row grow justify-center items-center gap-14 max-[1035px]:pl-5 max-[1035px]:flex-wrap max-[1035px]:py-5'>
+            <div className='flex flex-row grow justify-center items-center gap-14 py-7 max-[1035px]:pl-5 max-[1035px]:flex-wrap max-[1035px]:py-5'>
               <span className='h-fit text-5xl  flex flex-col font-semibold'>278 <span className='text-base font-normal'>Total Members</span> </span>
               <span className='h-fit text-5xl  flex flex-col font-semibold'>120 <span className='text-base font-normal'>Events per year</span> </span>
               <span className='h-fit text-5xl  flex flex-col font-semibold'>27  <span className='text-base font-normal'>Awards Won</span> </span>
@@ -256,7 +256,7 @@ function OurFamily(){
         <div className='w-full flex flex-wrap  justify-center p-8' data-aos='fade-up'>
             {
               logoimages.map((image, i) =>{
-                return <img src={image} alt="" key={i} className='hover:scale-125 transition-all duration-100 cursor-pointer' />
+                return <img src={image} alt="" key={i} className='hover:scale-125 hover:shadow-xl transition-all duration-100 cursor-pointer' />
               })
             }
         </div>
@@ -397,10 +397,10 @@ function Testimonials(){
       <div className='w-full h-[450px]  bg-cover bg-top max-[500px]:h-fit' style={{backgroundImage:`url('Images/cec_2.jpg')`}}>
         <div className='w-full h-full backdrop-blur-md flex flex-col text-white items-center justify-center'>
           <div className='w-[70px] h-[70px] rounded-full bg-black m-3 overflow-clip'>
-            <img src={dataset[currentindex].icon} alt="" className='w-full h-full transition-all duration-150' />
+            <img src={dataset[currentindex].icon} alt="" className='w-full h-full transition-all duration-200 ease-in' />
           </div>
           <div className='w-fit h-fit flex flex-col items-end'>
-            <p className='w-[800px] max-[800px]:w-fit h-fit  max-[800px]:text-center max-[800px]:px-2 transition-all duration-150'>{dataset[currentindex].quote}</p>
+            <p className='w-[800px] max-[800px]:w-fit h-fit  max-[800px]:text-center max-[800px]:px-2 italic transition-all duration-150'><span className='font-semibold text-xl'>"</span>{dataset[currentindex].quote}<span className='font-semibold text-xl'>"</span></p>
             <span className='max-[800px]:px-2 transition-all duration-150'>-{dataset[currentindex].name}<br/> {dataset[currentindex].position}</span>
           </div>
         </div>
@@ -451,11 +451,14 @@ function Footer(){
           <a href={joinuslink} className='underline transition-all duration-100'>Join us</a>
         </div>
         <div className='flex flex-col px-10 grow pt-3 items-end relative max-[1000px]:gap-2  max-[450px]:items-start max-[450px]:px-0 '>
-          <span className='text-3xl relative '>Follow Us</span>
+          <span className='text-4xl relative  '>Follow Us</span>
           <div className='flex flex-row gap-5 pt-3 pl-3 max-[1000px]:pt-0 max-[450px]:pl-0'>
-            <Followus/>
+          <a href="https://www.instagram.com/ieee_sb_cec/" className='text-[#b4b4b4] hover:text-white cursor-pointer'><BsInstagram size={25} /></a>
+      <a href="https://www.linkedin.com/company/cecieee/" className='text-[#b4b4b4] hover:text-white cursor-pointer'><BsLinkedin size={25} /></a>
+      <a href="https://www.facebook.com/IEEECEC/" className='text-[#b4b4b4] hover:text-white cursor-pointer'><BsFacebook size={25} /></a>
+      <a href="https://www.youtube.com/channel/UCXh6fVbDGCIidsVHabpZFiw" className='text-[#b4b4b4] hover:text-white cursor-pointer'><BsYoutube size={25}  href='www.youtube.com'/></a>
           </div>
-          <span className='absolute bottom-1 max-[1000px]:relative max-[1000px]:bottom-0 '>Developed by Harikrishna A <a href="https://github.com/GLITCH-hash01" className='underline hover:text-blue-700'>Github</a></span>
+          <span className='absolute bottom-1 max-[1000px]:relative max-[1000px]:bottom-0 '>Developed by Harikrishna A <br /> <a href="https://github.com/GLITCH-hash01" className='underline hover:text-blue-700'>Github</a></span>
         </div>
       </div>
     </div>
