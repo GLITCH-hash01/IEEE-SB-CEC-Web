@@ -115,7 +115,7 @@ function ImageSlideshow(){
   // Main HTML Code
   const jsxelement=(
     <>
-    <div className='absolute w-screen h-screen top-0 right-0 bg-cover   transition-all duration-[0.5s] ease-in bg-fixed'style={{backgroundImage:`url(${listofimgaeslides[currentindex]})`,backgroundPosition:'center bottom'}}></div>
+    <div className='absolute w-screen h-screen top-0 right-0 bg-cover transition-all duration-[0.5s] ease-in bg-fixed'style={{backgroundImage:`url(${listofimgaeslides[currentindex]})`,backgroundPosition:'center bottom'}}></div>
     </>
   );
 
@@ -146,11 +146,11 @@ function HeroSection(){
   const jsxelement=(
     <>
     <div className='absolute h-screen  w-screen z-[2] right-0 top-0 bg-gradient-to-b from-[#1d1c1c] to-transparent' id="home">
-      <div className='flex flex-col w-fit  text-white ml-10 h-screen place-content-center'>
-        <span className='text-2xl'>Welcome to </span>
-        <span className='font-600 text-50 h-[56.7px] max-[400px]:text-35 opacity-60'>IEEE Student Branch</span>
+      <div className='flex flex-col w-fit  text-white ml-10 h-screen place-content-center max-[575px]:ml-5'>
+        <span className='text-2xl max-[490px]:text-xl'>Welcome to </span>
+        <span className='font-600 text-50 h-[56.7px] max-[490px]:text-35 opacity-60 max-[290px]:text-2xl max-[290px]:h-[24px] '>IEEE Student Branch</span>
         {/* <span className='font-600 text-50 h-[56.7px] max-[400px]:text-35'>Student Branch</span> */}
-        <span className='font-600 text-50 h-[56.7px] max-[400px]:text-35 opacity-60'>CE Chengannur</span>
+        <span className='font-600 text-50 h-[56.7px] max-[490px]:text-35 opacity-60 max-[290px]:text-2xl max-[290px]:h-[24px]'>CE Chengannur</span>
         <a href={joinuslink} className='rounded-3xl  border-2  w-[130px] h-[50px] justify-center flex items-center my-5 cursor-pointer hover:bg-white hover:text-black transition-all duration-75'> Join IEEE</a>
       </div>
       <div className='absolute bottom-0 bg-black h-16 w-screen flex flex-row gap-5 items-center p-5 px-10 max-[575px]:h-10' id='About-IEEE'>
@@ -302,7 +302,7 @@ function Whyieee(){
   // Main HTML Code
   const jsxelement=(
       <>
-      <div className='w-full h-fit bg-[#00629b] flex flex-row max-[750px]:flex-col '  data-aos='slide-right'>
+      <div className='w-full h-fit bg-[#002e5b] flex flex-row max-[750px]:flex-col '  data-aos='slide-right'>
         <div className='w-2/6  flex  justify-center items-center relative p-3 max-[750px]:w-full '>
           <div className='w-full h-full flex justify-center items-center relative border-r-[1px] border-white max-[750px]:border-r-0 max-[750px]:border-b-[1px]'>
             <span className='text-white  font-600 text-4xl p-5'>Why IEEE ?</span>
@@ -395,12 +395,12 @@ function Testimonials(){
     <div className='w-full h-fit flex flex-col' data-aos='fade-up'>
       <span className='text-4xl font-semibold text-[#002e5b] justify-center flex p-10'>Testimonials</span>
       <div className='w-full h-[450px]  bg-cover bg-top max-[500px]:h-fit' style={{backgroundImage:`url('Images/cec_2.jpg')`}}>
-        <div className='w-full h-full backdrop-blur-md flex flex-col text-white items-center justify-center'>
+        <div className='w-full h-full backdrop-blur-md flex flex-col text-white items-center justify-center py-3'>
           <div className='w-[70px] h-[70px] rounded-full bg-black m-3 overflow-clip'>
             <img src={dataset[currentindex].icon} alt="" className='w-full h-full transition-all duration-200 ease-in' />
           </div>
           <div className='w-fit h-fit flex flex-col items-end'>
-            <p className='w-[800px] max-[800px]:w-fit h-fit  max-[800px]:text-center max-[800px]:px-2 italic transition-all duration-150'><span className='font-semibold text-xl'>"</span>{dataset[currentindex].quote}<span className='font-semibold text-xl'>"</span></p>
+            <p className='w-[800px] max-[800px]:w-fit h-fit font-montserrat max-[800px]:text-center max-[800px]:px-2 italic transition-all duration-150'><span className='font-semibold text-xl'>"</span>{dataset[currentindex].quote}<span className='font-semibold text-xl'>"</span></p>
             <span className='max-[800px]:px-2 transition-all duration-150'>-{dataset[currentindex].name}<br/> {dataset[currentindex].position}</span>
           </div>
         </div>
@@ -434,7 +434,7 @@ function Footer(){
   // Main HTML Code
   const jsxelement=(
     <>
-    <div className='w-full h-fit flex flex-col bg-[#002e5b]  mt-2 p-11 text-white'>
+    <div className='w-full h-fit flex flex-col bg-[#002e5b]  mt-2 p-11 max-[290px]:p-4 text-white'>
       <div className=' w-full h-full flex flex-wrap gap-3'>
         <div className='flex flex-col h-fit'>
           <img src="/Icons/IEEE-SB-logo-web.png" alt=""  className='w-[300px]'/>

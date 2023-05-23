@@ -6,6 +6,9 @@ export default {
   "./src/**/*.{js,ts,jsx,tsx}",],
   theme: {
     extend: {
+      fontFamily: {
+        'montserrat': ['Montserrat',"sans-serif"]
+    },
       fontSize:{
         '50': '50px',
         '35':'35px'
