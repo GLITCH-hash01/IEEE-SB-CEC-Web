@@ -151,7 +151,7 @@ function HeroSection(){
         <span className='font-600 text-50 h-[56.7px] max-[490px]:text-35 opacity-60 max-[290px]:text-2xl max-[290px]:h-[24px] '>IEEE Student Branch</span>
         {/* <span className='font-600 text-50 h-[56.7px] max-[400px]:text-35'>Student Branch</span> */}
         <span className='font-600 text-50 h-[56.7px] max-[490px]:text-35 opacity-60 max-[290px]:text-2xl max-[290px]:h-[24px]'>CE Chengannur</span>
-        <a href={joinuslink} className='rounded-3xl  border-2  w-[130px] h-[50px] justify-center flex items-center my-5 cursor-pointer hover:bg-white hover:text-black transition-all duration-75'> Join IEE</a>
+        <a href={joinuslink} className='rounded-3xl  border-2  w-[130px] h-[50px] justify-center flex items-center my-5 cursor-pointer hover:bg-white hover:text-black transition-all duration-75'> Join IEEE</a>
       </div>
       <div className='absolute bottom-0 bg-black h-16 w-screen flex flex-row gap-5 items-center p-5 px-10 max-[575px]:h-10' id='About-IEEE'>
         <a href="https://www.ieee.org/" className='text-[#b4b4b4] hover:text-white max-[575px]:text-xs'>IEEE.org</a>
