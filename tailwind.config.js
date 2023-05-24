@@ -11,7 +11,8 @@ export default {
     },
       fontSize:{
         '50': '50px',
-        '35':'35px'
+        '35':'35px',
+        '70':'70px',
       },
       fontWeight:{
         '600':'600'

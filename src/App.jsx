@@ -146,11 +146,11 @@ function HeroSection(){
   const jsxelement=(
     <>
     <div className='absolute h-screen  w-screen z-[2] right-0 top-0 bg-gradient-to-b from-black to-transparent' id="home">
-      <div className='flex flex-col w-fit  text-white ml-10 h-screen place-content-center'>
-        <span className='text-2xl max-[490px]:text-xl'>Welcome to </span>
-        <span className='font-600 text-50 h-[56.7px] max-[490px]:text-35 opacity-60 max-[290px]:text-2xl max-[290px]:h-[24px] '>IEEE Student Branch</span>
+      <div className='flex flex-col w-fit  text-white ml-10 h-screen place-content-center max-[490px]:ml-5'>
+        <span className='text-2xl max-[490px]:text-xl max-[490px]:h-[5px]' style={{lineHeight:'0px'}}>Welcome to </span>
+        <span className='font-600 text-70 h-[80px] max-[490px]:text-35 opacity-70 max-[335px]:text-2xl max-[335px]:h-[24px] max-[490px]:h-[40px] max-[250px]:h-fit max-[680px]:text-50'>IEEE Student Branch</span>
         {/* <span className='font-600 text-50 h-[56.7px] max-[400px]:text-35'>Student Branch</span> */}
-        <span className='font-600 text-50 h-[56.7px] max-[490px]:text-35 opacity-60 max-[290px]:text-2xl max-[290px]:h-[24px]'>CE Chengannur</span>
+        <span className='font-600 text-70 h-[80px] max-[490px]:text-35 opacity-70 max-[335px]:text-2xl max-[335px]:h-[24px] max-[490px]:h-[40px] max-[250px]:h-fit max-[680px]:text-50'>CE Chengannur</span>
         <a href={joinuslink} className='rounded-3xl  border-2  w-[130px] h-[50px] justify-center flex items-center my-5 cursor-pointer hover:bg-white hover:text-black transition-all duration-75'> Join IEEE</a>
       </div>
       <div className='absolute bottom-0 bg-black h-16 w-screen flex flex-row gap-5 items-center p-5 px-10 max-[575px]:h-10' id='About-IEEE'>
