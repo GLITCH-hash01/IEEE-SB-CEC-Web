@@ -401,7 +401,7 @@ function Testimonials(){
           </div>
           <div className='w-fit h-fit flex flex-col items-end'>
             <p className='w-[800px] max-[800px]:w-fit h-fit font-montserrat max-[800px]:text-center max-[800px]:px-2 italic transition-all duration-150'><span className='font-semibold text-xl'>"</span>{dataset[currentindex].quote}<span className='font-semibold text-xl'>"</span></p>
-            <span className='max-[800px]:px-2 transition-all duration-150'>-{dataset[currentindex].name}<br/> {dataset[currentindex].position}</span>
+            <span className='max-[800px]:px-2 transition-all duration-150 font-serif'>-{dataset[currentindex].name}<br/> {dataset[currentindex].position}</span>
           </div>
         </div>
       </div>
